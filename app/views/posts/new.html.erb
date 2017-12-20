@@ -1,0 +1,7 @@
+<h1>NEW POST</h1>
+
+<%= render("layouts/error_messages") %>
+
+<%= form_tag("/posts/create") do %>
+<%= render("input_form") %>
+<% end %>

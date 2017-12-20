@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAMPLE SNS</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+    <div>
+      <h1><%= link_to("SAMPLE APP","/") %></h1>
+    </div>
+
+    <div>
+      <ul>
+        <% if @current_user %>
+        <li><%= link_to(@current_user.name,"/users/#{@current_user.id}") %></li>
+        <li><%= link_to("USERS","/users") %></li>
+        <li><%= link_to("NEW POST","/posts/new") %></li>
+        <li><%= link_to("POSTS","/") %></li>
+        <li><%= link_to("LOG OUT","/logout",method:"post") %></li>
+        <% else %>
+        <li><%= link_to("SIGN UP","/signup") %></li>
+        <li><%= link_to("LOG IN","/login") %></li>
+        <% end %>
+      </ul>
+    </div>
+  </header>
+  <!-- /header -->
+
+
+  <div id="yield">
+      <% if flash[:notice] %>
+  <div id="frash-message">
+    <p><%= flash[:notice] %></p>
+  </div>
+  <% end %>
+    <%= yield %>
+  </div>
+
+
+  <footer>
+    <div>
+      <p>Daichi Tanaka</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<h1>USER</h1>
+
+<div class="list-box">
+  <img src="/user_images/<%= @user.image_name %>">
+  <h2><%= @user.name %></h2>
+
+  <% if @current_user.id == @user.id %>
+    <div class="edit-destroy-button">
+    <%= link_to("EDIT","/users/#{@user.id}/edit") %>
+    <%= link_to("DESTROY","/users/#{@user.id}/destroy",method:"post") %>
+  </div>
+  <% end %>
+    <p>created_at: <%= @user.created_at %></p>
+  </div>
+
+
+
+<h2>Posts this user posted.</h2>
+
+  <% if @posts.length > 0 %>
+
+  <% @posts.each do |post| %>
+  <div class="list-box">
+  <%= link_to(post.title,"/posts/#{post.id}") %>
+  </div>
+  <% end %>
+
+  <% else %>
+
+
+  <div class="list-box">
+  <p>This user has no posts.</p>
+  </div>
+
+   <% end %>

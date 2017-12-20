@@ -1,0 +1,12 @@
+<div class="list-box">
+  <h2><%= @post.title %></h2>
+  <p><%= @post.content %></p>
+
+  <% if @current_user.id == @post.user_id %>
+  <div class="edit-destroy-button">
+  <%= link_to("EDIT","/posts/#{@post.id}/edit") %>
+  <%= link_to("DESTROY","/posts/#{@post.id}/destroy",method:"post") %>
+  </div>
+  <% end %>
+  <p><%= @user.name %> | <%= @post.created_at %></p>
+</div>

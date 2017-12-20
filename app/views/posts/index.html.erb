@@ -1,0 +1,8 @@
+<h1>POSTS</h1>
+
+<% @posts.each do |post| %>
+<div class="list-box">
+  <h2><%= link_to(post.title,"/posts/#{post.id}") %></h2>
+  <p><%= post.created_at %></p>
+</div>
+<% end %>

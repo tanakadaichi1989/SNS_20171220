@@ -1,0 +1,11 @@
+<h1>POST EDIT</h1>
+
+<%= render("layouts/error_messages") %>
+
+<% if @current_user.id == @post.user_id %>
+  <%= render("input_form") %>
+<% else %>
+  <div>
+    <p>You have no rights edit this post.</p>
+  </div>
+<% end %>

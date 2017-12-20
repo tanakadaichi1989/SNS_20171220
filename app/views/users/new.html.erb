@@ -1,0 +1,19 @@
+<h1>SIGN UP</h1>
+
+<%= render("layouts/error_messages") %>
+
+<%= form_tag("/users/create",method:"post") do %>
+<div>
+<input name="name" placeholder="name" value="<%= @name %>">
+</div>
+<div>
+<input name="email" placeholder="email" value="<%= @email %>">
+</div>
+<div>
+<input name="password" placeholder="password" type="password">
+</div>
+<div>
+<input type="submit" value="submit">
+</div>
+<% end %>
+

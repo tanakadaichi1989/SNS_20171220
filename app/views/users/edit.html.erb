@@ -1,0 +1,19 @@
+<h1>USER INFO EDIT</h1>
+
+<%= render("layouts/error_messages") %>
+
+<%= form_tag("/users/#{@user.id}/update",method:"post",multipart:true) do %>
+<div>
+<input name="name" placeholder="name" value="<%= @name %>">
+</div>
+<div>
+<input name="emai" placeholder="email" value="<%= @email %>">
+</div>
+<div>
+<input name="image" placeholder="image" type="file">
+</div>
+
+
+<input type="submit" value="submit">
+</div>
+<% end %>
