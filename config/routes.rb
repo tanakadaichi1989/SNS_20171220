@@ -43,5 +43,9 @@ Rails.application.routes.draw do
 
   post "users/:id/destroy" => "users#destroy"
 
+  post "posts/:post_id/like" => "likes#like"
+
+  post "posts/:post_id/dislike" => "likes#dislike"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

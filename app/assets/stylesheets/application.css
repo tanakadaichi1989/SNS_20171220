@@ -159,3 +159,22 @@ textarea{
 .error_messages p{
   margin-left: 5px;
 }
+
+.like{
+  color:#ff1493;
+  font-weight: bolder;
+  background-color: #EEEEEE;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width:50px;
+}
+
+i{
+  color:#ff1493;
+}
+
+.like span{
+  margin-left:5px;
+}

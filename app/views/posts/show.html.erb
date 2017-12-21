@@ -2,11 +2,21 @@
   <h2><%= @post.title %></h2>
   <p><%= @post.content %></p>
 
+
+  <p><%= @user.name %> | <%= @post.created_at %></p>
+
+  <div class="like">
+    <% if Like.find_by(user_id: @current_user,post_id: @post.id) %>
+    <%= link_to("/posts/#{@post.id}/dislike",method:"post") do %><i class="fas fa-heart"></i><% end %><span><%= @likes.count %></span>
+    <% else %>
+    <%= link_to("/posts/#{@post.id}/like",method:"post") do %><i class="far fa-heart"></i><% end %><span><%= @likes.count %></span>
+    <% end %>
+  </div>
+
   <% if @current_user.id == @post.user_id %>
   <div class="edit-destroy-button">
   <%= link_to("EDIT","/posts/#{@post.id}/edit") %>
   <%= link_to("DESTROY","/posts/#{@post.id}/destroy",method:"post") %>
   </div>
   <% end %>
-  <p><%= @user.name %> | <%= @post.created_at %></p>
 </div>
