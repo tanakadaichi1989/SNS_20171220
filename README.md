@@ -10,10 +10,10 @@
 |password_digest|String| ※passwordカラムをBCRyptを利用して暗号化
 
 name および emailカラムに下記制約を設定
-'''Ruby
+```Ruby:models/user.rb
 validates :name, {presence: true}
 validates :email, {presence: true, uniqueness:true}
-'''
+```
 
 ## Postモデル
 
