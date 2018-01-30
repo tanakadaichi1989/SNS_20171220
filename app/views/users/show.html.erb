@@ -2,13 +2,12 @@
 <h1>USER</h1>
 
 <div class="list-box">
-  <img src="/user_images/<%= @user.image_name %>">
   <h2><%= @user.name %></h2>
 
   <% if @current_user.id == @user.id %>
     <div class="edit-destroy-button">
-    <%= link_to("EDIT","/users/#{@user.id}/edit") %>
-    <%= link_to("DESTROY","/users/#{@user.id}/destroy",method:"post") %>
+    <%= link_to("EDIT","/users/#{@user.id}/edit",class: "btn btn-primary") %>
+    <%= link_to("DESTROY","/users/#{@user.id}/destroy",method:"post",class: "btn btn-danger") %>
   </div>
   <% end %>
     <p>created_at: <%= @user.created_at %></p>

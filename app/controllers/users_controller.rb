@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to("/")
-      flash[:notice] = "Thank to your join."
+      flash[:notice] = "Welcome to our app."
     else
       @name = params[:name]
       @email = params[:email]
@@ -41,16 +41,10 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
-
-    image = params[:image]
-
-    if image
-      @user.image_name = "#{@user.id}.jpg"
-      File.binwrite("public/user_images/#{@user.image_name}",image.read)
-    end
+    @user.password = params[:password]
 
     if @user.save
-      flash[:notice] = "Your post is edited."
+      flash[:notice] = "Your infomation is edited."
       redirect_to("/")
     else
       @error_messages = @user.errors.full_messages
@@ -76,9 +70,9 @@ class UsersController < ApplicationController
    def login
     @user = User.find_by(email: params[:email])
 
-if @user && @user.authenticate(params[:password])
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      flash[notice] = "login."
+      flash[:notice] = "Log in succsessed."
       redirect_to("/")
     else
       flash[:notice] = "Comfirm your email or password."
@@ -89,7 +83,7 @@ if @user && @user.authenticate(params[:password])
 
    def logout
     session[:user_id] = nil
-    flash[:notice] = "logout."
+    flash[:notice] = "Log out successed."
     redirect_to("/login")
    end
 

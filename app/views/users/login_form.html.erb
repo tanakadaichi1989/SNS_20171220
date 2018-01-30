@@ -4,14 +4,14 @@
 
 
 <%= form_tag("/login",method:"post") do %>
-<div>
+<div class="form-group">
 <input name="email" placeholder="email" value="<%= @email %>">
 </div>
-<div>
+<div class="form-group">
 <input name="password" placeholder="password" type="password">
 </div>
-<div>
-<input type="submit" value="submit">
+<div class="form-group">
+<button type="submit" class="btn btn-primary">Log In</button>
 </div>
 <% end %>
 

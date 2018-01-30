@@ -1,10 +1,8 @@
  <header>
-    <div>
-      <h1><%= link_to("SAMPLE APP","/") %></h1>
-    </div>
+      <h1>SAMPLE APP</h1>
+
 
     <div>
-     <button class="btn btn-primary">MENU</button>
       <ul>
         <% if @current_user %>
         <li><%= link_to(@current_user.name,"/users/#{@current_user.id}") %></li>

@@ -2,7 +2,6 @@
 
 <% @users.each do |user| %>
 <div class="list-box">
-  <img src="/user_images/<%= user.image_name %>">
   <h2><%= link_to(user.name,"/users/#{user.id}") %></h2>
 </div>
 <% end %>
