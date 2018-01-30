@@ -1,5 +1,12 @@
 @import "bootstrap";
 
+@mixin container{
+  background-color:white;
+  padding:10px;
+  margin-bottom:10px;
+  box-shadow: 1px 1px 1px gray;
+}
+
 body{
   background-color:lighten(#EEEEEE,5%);
 }
@@ -60,4 +67,15 @@ footer{
   margin-top:100px;
   margin-bottom:100px;
   padding:50px;
+}
+
+.list-box{
+  background-color:white;
+  padding:10px;
+  margin-bottom:10px;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.container{
+  @include container;
 }
