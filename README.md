@@ -1,24 +1,43 @@
-# README
+# SNS_by_Ruby_on_Rails
+記事投稿・いいね！機能を実装したSNS（制作期間：約10日）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Userモデル
 
-Things you may want to cover:
+|カラム|型|
+|-|-|
+|name|String|
+|email|String|
+|password_digest|String| ※passwordカラムをBCRyptを利用して暗号化
 
-* Ruby version
+name および email カラムに下記制約を設定
+```Ruby:models/user.rb
+validates :name, {presence: true}
+validates :email, {presence: true, uniqueness:true}
+```
 
-* System dependencies
+## Postモデル
 
-* Configuration
+|カラム|型|
+|-|-|
+|title|String|
+|content|Text|
+|user_id|Integer| ※Userモデルと紐付け
 
-* Database creation
+title および content カラムに下記制約を設定
+```Ruby:models/post.rb
+validates :title, {presence: true}
+validates :content, {presence: true}
+```
 
-* Database initialization
+## Likeモデル
+|カラム|型|
+|-|-|
+|user_id|Integer|
+|post_id|Integer|
 
-* How to run the test suite
+user_id および post_id カラムに下記制約を設定
+```Ruby:models/like.rb
+validates :user_id, {presence: true}
+validates :post_id, {presence: true}
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
