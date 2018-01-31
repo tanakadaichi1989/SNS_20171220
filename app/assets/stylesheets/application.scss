@@ -38,32 +38,21 @@ header{
   h1{
     color:white;
     margin-left:10px;
+    float:left;
   }
 
-  li{
-    float:left;
+  .dropdown{
+    margin-top:7px;
     margin-right:10px;
-    list-style:none;
-
-    a {
-      color:white;
-
-      &:hover{
-        color:white;
-      }
-
-      &:active{
-        color:white;
-      }
-    }
+    float:right;
   }
 }
 
 .flash{
-  position:relative;
-  top:100px;
+  position:fixed;
+  top:60px;
   left:50px;
-  z-index:5;
+  z-index:30;
   width:460px;
   font-weight:bolder;
 }
@@ -83,7 +72,7 @@ footer{
 }
 
 #yield{
-  margin-top:100px;
+  margin-top:50px;
   margin-bottom:100px;
   padding:50px;
 }

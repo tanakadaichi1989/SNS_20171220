@@ -5,8 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'jquery-rails' 
-gem 'jquery-ui-rails'
+gem 'jquery-rails'
 
 gem "bcrypt"
 gem 'bootstrap', '~> 4.0.0'

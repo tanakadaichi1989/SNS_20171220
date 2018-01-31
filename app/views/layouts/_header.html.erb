@@ -1,19 +1,20 @@
  <header>
-      <h1>SAMPLE APP</h1>
+    <h1>SAMPLE APP</h1>
 
 
-    <div>
-      <ul>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MENU</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <% if @current_user %>
-        <li><%= link_to(@current_user.name,"/users/#{@current_user.id}") %></li>
-        <li><%= link_to("USERS","/users") %></li>
-        <li><%= link_to("NEW POST","/posts/new") %></li>
-        <li><%= link_to("POSTS","/") %></li>
-        <li><%= link_to("LOG OUT","/logout",method:"post") %></li>
+        <%= link_to(@current_user.name,"/users/#{@current_user.id}",class: "dropdown-item") %></li>
+        <%= link_to("USERS","/users",class: "dropdown-item") %></li>
+        <%= link_to("NEW POST","/posts/new",class: "dropdown-item") %></li>
+        <%= link_to("POSTS","/",class: "dropdown-item") %></li>
+        <%= link_to("LOG OUT","/logout",method:"post",class: "dropdown-item") %></li>
         <% else %>
-        <li><%= link_to("SIGN UP","/signup") %></li>
-        <li><%= link_to("LOG IN","/login") %></li>
+        <%= link_to("SIGN UP","/signup",class: "dropdown-item") %></li>
+        <%= link_to("LOG IN","/login",class: "dropdown-item") %></li>
         <% end %>
-      </ul>
+        </div>
     </div>
 </header>

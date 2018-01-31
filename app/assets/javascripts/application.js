@@ -10,9 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery-ui/widgets/datepicker
 //= require rails-ujs
-//= require bootstrap
 //= require turbolinks
 //= require_tree .
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+$(function(){
+  $('.flash').delay(5000).fadeOut();
+});
