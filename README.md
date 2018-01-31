@@ -1,7 +1,7 @@
 # SNS_by_Ruby_on_Rails
 記事投稿・いいね！機能を実装したSNS
 
-[image]()
+[image](https://github.com/tanakadaichi1989/SNS_by_Ruby_on_Rails/blob/master/image.png)
 
 ## Userモデル
 
