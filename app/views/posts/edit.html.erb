@@ -1,9 +1,11 @@
-<h1>POST EDIT</h1>
+<h1>EDIT POST</h1>
 
 <%= render("layouts/error_messages") %>
 
 <% if @current_user.id == @post.user_id %>
+  <%= form_tag("/posts/#{params[:id]}/update",method: "post") do %>
   <%= render("input_form") %>
+  <% end %>
 <% else %>
   <div>
     <p>You have no rights edit this post.</p>
