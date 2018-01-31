@@ -16,7 +16,7 @@
   }
 }
 
-$heart:#c71585;
+$heart:#dc0014;
 
 body{
   background-color:lighten(#EEEEEE,5%);
@@ -37,14 +37,22 @@ header{
 
   h1{
     color:white;
+    margin-top:10px;
     margin-left:10px;
     float:left;
+    font-size:25px;
   }
 
   .dropdown{
     margin-top:7px;
     margin-right:10px;
     float:right;
+    height:20px;
+
+    button{
+      font-size:15px;
+      font-weight:bolder;
+    }
   }
 }
 
@@ -67,7 +75,15 @@ footer{
 
   p{
     margin-left:10px;
+  }
+
+  a{
     font-weight:bolder;
+    color:black;
+
+    &:hover{
+      color:black;
+    }
   }
 }
 
