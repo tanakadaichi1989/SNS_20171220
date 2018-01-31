@@ -7,8 +7,8 @@
 
   <% if @current_user.id == @user.id %>
     <div class="edit-destroy-button">
-    <%= link_to("EDIT","/users/#{@user.id}/edit",class: "btn btn-primary") %>
-    <%= link_to("DESTROY","/users/#{@user.id}/destroy",method:"post",class: "btn btn-danger") %>
+    <%= link_to("EDIT","/users/#{@user.id}/edit",class: "badge badge-primary") %>
+    <%= link_to("DESTROY","/users/#{@user.id}/destroy",method:"post",class: "badge badge-danger") %>
   </div>
   <% end %>
   </div>
