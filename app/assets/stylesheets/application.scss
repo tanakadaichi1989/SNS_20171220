@@ -59,6 +59,7 @@ header{
   left:50px;
   z-index:5;
   width:460px;
+  font-weight:bolder;
 }
 
 footer{
@@ -110,4 +111,13 @@ span{
 
 .edit-destroy-button{
   margin-top:10px;
+  margin-left:10px;
+}
+
+.user_posts{
+  margin-top:50px;
+}
+
+.error_messages{
+  font-weight:bolder;
 }

@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       redirect_to("/")
-      flash[:notice] = "Welcome to our app."
+      flash[:success] = "Welcome to our app."
     else
       @name = params[:name]
       @email = params[:email]
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     @user.password = params[:password]
 
     if @user.save
-      flash[:notice] = "Your infomation is edited."
+      flash[:success] = "Your infomation is edited."
       redirect_to("/")
     else
       @error_messages = @user.errors.full_messages
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
 
     if @user.destroy
-      flash[:notice] = "Your information is destroyed."
+      flash[:success] = "Your information is destroyed."
       redirect_to("/signup")
     end
    end
@@ -72,10 +72,10 @@ class UsersController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      flash[:notice] = "Log in succsessed."
+      flash[:success] = "Log in succsessed."
       redirect_to("/")
     else
-      flash[:notice] = "Comfirm your email or password."
+      flash[:danger] = "Comfirm your email or password."
       @email = params[:email]
       render("users/login_form")
     end
@@ -83,13 +83,13 @@ class UsersController < ApplicationController
 
    def logout
     session[:user_id] = nil
-    flash[:notice] = "Log out successed."
+    flash[:success] = "Log out successed."
     redirect_to("/login")
    end
 
    def ensure_correct_user
     if @current_user.id != params[:id].to_i
-      flash[:notice] = "You don't have rights edit this page."
+      flash[:danger] = "You don't have rights edit this page."
       redirect_to("/")
     end
    end
