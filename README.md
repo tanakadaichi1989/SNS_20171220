@@ -46,3 +46,9 @@ validates :post_id, {presence: true}
 ## その他
 製作期間：約10日
 製作費用：¥0-
+
+### 下記アドレスからログインが可能
+https://sns-20171220.herokuapp.com/login
+
+《メールアドレス》sample@sample.com
+《パスワード》samplesample
