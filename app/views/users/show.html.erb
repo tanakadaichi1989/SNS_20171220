@@ -3,6 +3,7 @@
 
 <div class="list-box">
   <h2><%= @user.name %></h2>
+  <p>Jointed at: <%= (@user.created_at).strftime("%Y/%m/%d") %></p>
 
   <% if @current_user.id == @user.id %>
     <div class="edit-destroy-button">
@@ -10,7 +11,6 @@
     <%= link_to("DESTROY","/users/#{@user.id}/destroy",method:"post",class: "btn btn-danger") %>
   </div>
   <% end %>
-    <p>created_at: <%= @user.created_at %></p>
   </div>
 
 

@@ -5,7 +5,18 @@
   padding:10px;
   margin-bottom:10px;
   box-shadow: 1px 1px 1px gray;
+
+  input{
+    width:280px;
+  }
+
+  textarea{
+    width:280px;
+    height:400px;
+  }
 }
+
+$heart:#c71585;
 
 body{
   background-color:lighten(#EEEEEE,5%);
@@ -43,10 +54,10 @@ header{
 }
 
 .flash{
-  position:fix;
+  position:relative;
   top:100px;
   left:50px;
-  z-index:20;
+  z-index:5;
   width:460px;
 }
 
@@ -78,4 +89,25 @@ footer{
 
 .container{
   @include container;
+}
+
+.like{
+
+background-color:lighten(gray,40%);
+width:50px;
+text-align:center;
+border-radius:10px;
+
+span{
+  font-weight:bolder;
+}
+
+.fa-heart{
+  color:lighten($heart,20%);
+  margin-right:2px;
+}
+}
+
+.edit-destroy-button{
+  margin-top:10px;
 }

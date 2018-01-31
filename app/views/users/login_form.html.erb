@@ -2,7 +2,7 @@
 
 <%= render("layouts/error_messages") %>
 
-
+<div class="container">
 <%= form_tag("/login",method:"post") do %>
 <div class="form-group">
 <input name="email" placeholder="email" value="<%= @email %>">
@@ -14,4 +14,5 @@
 <button type="submit" class="btn btn-primary">Log In</button>
 </div>
 <% end %>
+</div>
 
