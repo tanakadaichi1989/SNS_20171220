@@ -1,5 +1,7 @@
 # SNS_by_Ruby_on_Rails
-記事投稿・いいね！機能を実装したSNS（制作期間：約10日）
+記事投稿・いいね！機能を実装したSNS
+
+[image]()
 
 ## Userモデル
 
@@ -41,3 +43,6 @@ validates :user_id, {presence: true}
 validates :post_id, {presence: true}
 ```
 
+## その他
+製作期間：約10日
+製作費用：¥0-
