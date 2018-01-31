@@ -1,4 +1,4 @@
-# SNS_by_Ruby_on_Rails
+# SNS by Ruby on Rails
 記事投稿・いいね！機能を実装したSNS
 
 ![image](https://github.com/tanakadaichi1989/SNS_by_Ruby_on_Rails/blob/master/image.png)
