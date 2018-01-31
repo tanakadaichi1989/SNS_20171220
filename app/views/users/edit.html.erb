@@ -1,7 +1,10 @@
+<% provide(:title,"EDIT USER INFO") %>
+
 <h1>EDIT USER INFO</h1>
 
 <%= render("layouts/error_messages") %>
 
+<div class="container">
 <%= form_tag("/users/#{@user.id}/update",method:"post",multipart:true) do %>
 <div class="form-group">
 <input name="name" placeholder="name" value="<%= @name %>">
@@ -17,3 +20,4 @@
 
 <button type="submit" class="btn btn-primary form-group">Update</button>
 <% end %>
+</div>
