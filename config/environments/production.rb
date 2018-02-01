@@ -1,5 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  # Google Analytics
+  GA.tracker = "UA-90855234-9"
 
   # Code is not reloaded between requests.
   config.cache_classes = true
